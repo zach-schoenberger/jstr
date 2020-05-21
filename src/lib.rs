@@ -37,8 +37,8 @@ pub enum Value<'a> {
 
 #[derive(Debug, PartialEq)]
 pub struct Entry<'a> {
-    key: &'a str,
-    value: Value<'a>,
+    pub key: &'a str,
+    pub value: Value<'a>,
 }
 
 pub fn deserialize(s: &str) -> Result<(Object, &str), Error> {
